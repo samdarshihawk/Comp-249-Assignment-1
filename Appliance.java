@@ -182,13 +182,17 @@ public class Appliance
 	//This method find all the appliances cheaper than the input price
 	public static void findCheaperThan(double price, Appliance[] array)
 	{
+		int found = 0 ; 
 		for (int j = 0; j < array.length; j++){
 			if(array[j]==null){
-				System.out.println("No Appliance cheaper than the "+price+" is avaiable in the inventory");
 				break;
 			}
 			else if(array[j].getprice() < price)
 				System.out.println (array[j].toString());
+				found++;
+		}
+		if(found==0){
+			System.out.println("No Appliance cheaper than the "+price+" is avaiable in the inventory");
 		}
 
 	}
@@ -379,25 +383,13 @@ public class Appliance
 									if (option == 1){
 										System.out.println("Enter the new Brand:");
 										inventory[index].setbrand(in.next());
-										System.out.println("\nAppliance Serial # "+serialnumber+"\n"
-										+"Brand: "+inventory[index].getbrand()+"\n"
-										+"Type: "+inventory[index].gettype()+"\n"
-										+"Price: "+inventory[index].getprice()+"\n");
 									}else if (option==2){
 										System.out.println("Enter the new type:");
 										inventory[index].settype(in.next());
-										System.out.println("\nAppliance Serial # "+serialnumber+"\n"
-										+"Brand: "+inventory[index].getbrand()+"\n"
-										+"Type: "+inventory[index].gettype()+"\n"
-										+"Price: "+inventory[index].getprice()+"\n");
 									
 									} else if (option == 3){
 										System.out.println("Enter the new price:");
 										inventory[index].setprice(in.nextDouble());
-										System.out.println("\nAppliance Serial # "+serialnumber+"\n"
-										+"Brand: "+inventory[index].getbrand()+"\n"
-										+"Type: "+inventory[index].gettype()+"\n"
-										+"Price: "+inventory[index].getprice()+"\n");	
 
 									}else if(option == 4){ // in this condition the program while exit from two while loop and do-while loop and would display the main menu again
 										g = false;// terminating the inner while loop
