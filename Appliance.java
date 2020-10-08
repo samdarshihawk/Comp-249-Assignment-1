@@ -6,7 +6,6 @@
 /**
  * </h1>Appliance Class Program</h1>
  *@author Samdarshi Tiwari  & Meet Vora 
- * Assignment # 01
  * @version 2.0
  * @since 02-10-2020
  * Due Date 02-10-2020
